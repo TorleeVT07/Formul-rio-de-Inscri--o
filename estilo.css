@@ -5,39 +5,86 @@
    font-family: sans-serif;
 }
 
-body{
-   width: 100%;
-   height: 100vh;
-   background-image: url(222222.png);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+body{ /* aqui colocamos estilização no corpo da página (body) */
+   width: 100%; /* largura */
+   height: 100vh; /*tamanho*/
+   background-image: url(222222.png); /*aqui inserimos a imagem*/
+   background-position: center; /*posicionamos a imagem no centro */
+   background-repeat: no-repeat; /*colocamos para que a img não se repita*/
+   background-size: cover; /*aqui atribuimos para que a imagem fique sobre toda nossa pagina*/
+   display: flex;/*resposável por colocar os itens na mesma linha (lado a lado)*/
+   align-items: center;/*alinhar os itens para o centro*/
+   justify-content: center;/*justificar contúdo ao centro*/
 }
 
-.container {
-   max-width: 1280px;
-   margin: 0 auto;
+.container { /*aqui estamos chamando nossa class*/
+   max-width: 1280px;/*atribuímos aqui um tamanho máximo de largura que essa class irá exerce*/
+   margin: 0 auto;/*dizemos ao navegador que as margens superios e inferior são iguais a 0 e a da esquerda e direita são automáticas*/
 }
 
 
-form{
-background-color: aliceblue;
-max-width: 500px;
-height: 450px;
-padding: 40px;
-border-radius: 20px;
+form{ /*aqui chamamos nossa form para estilização*/
+background-color: rgb(255, 255, 255);/*colocamos uma cor de fundo*/
+max-width: 500px;/*atribuimos aqui um tamanho máximo de largura que esse formulário irá */
+height: 450px;/*largura do formulário*/
+padding: 40px;/*preenchimento*/
+border-radius: 20px;/*arredondamento deas bordas do formulário*/
 }
 
-form h1{
-    text-align: center;
-    font-size: 30px;
-    color: black;
+form h1{ /*chamamos nosso texto para estilização*/
+    text-align: center;/*alinhamos ao centro*/
+    font-size: 30px;/*tamanho da letra*/
+    color: black;/*cor da letra*/
 }
 
-form p{ 
-    text-align: center;
+form p{ /* chamamos nosso paragrafo para estilização*/
+    text-align: center;/*alinhamento para o centro nosso parágrafo*/
+    margin: 20px 0; /*dizemos ao navegador que as margens superior e inferior são iguais a 20 e as da esquerda e direita são 0 */
+   }
 
-}
+    
+   .input-single { /*chamamos nossa class qie está emcabeçada  nad D|iv´s dos nossos input e label*/
+      position: relative; /*posição relativa*/
+      margin: 20px 0;/*dizemos ao navegador que as margens superior e inferior são iguias a 20 e*/
+   }
+
+   .input-single > label{ /* chamamos nodssa label para entilização*/
+     position: absolute;  /*atribuimos uma posição absoluta em relação ao formulário*/
+     left: 0;/*zeramos a margim esquerda*/
+     bottom: 5px;/*margem inferior atribuímos para 5px*/
+     transition: all 0.2s;/*inserimos uma transição total para 0.2s*/
+     cursor: text;/*aqui é para quando passar o mouse, aparecer o indicador de texto*/
+     
+   }
+
+   .input{ /* aqui chamamos nosso submit ou seja, o botão para estilização*/
+     width: 100%; /*largura*/
+     border: 0; /*tamanho da borda*/
+     border-bottom: 2px solid #ccc; /*estilização da borda inferior*/
+     padding: 5px; /*preechimento do input*/
+     font-size: 17px; /*tamanho*/
+     outline: 0; /**/
+   }
+
+
+   form > .input-single > .input:focus ~ label
+   form .input-single .input:valid ~ label {
+      transform: translateY(-25px);
+      font-size: 12px;
+      color: black;
+   }
+
+   .btn { /*aquin estamos chamando nossa class .btn para estilização*/
+     width: 100%;/*largura*/
+     text-align: center;/*alinhamento o texto ao centro
+     */
+   }
+
+   form input[type=submit] { /* aqui estilizamos nosso botão de enviar*/
+      padding: 10px 40px;/* preenchimento da altura e largura do botão*/
+      border: 0;/* aqui zeramos a borda*/
+      border-radius: 10px;/* colocamos aqui um arredondamento npo botão*/
+      background-color: rgb(0, 0, 0);/* cor do botão*/
+      color: rgb(255, 255, 255);/* cor da letra (dentro do botão)*/
+      cursor: pointer;/* torna o botão em algo clicável*/
+   }
